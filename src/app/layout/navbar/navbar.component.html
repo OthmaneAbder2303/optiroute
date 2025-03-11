@@ -1,1 +1,67 @@
-<p>navbar works!</p>
+<div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <a class="btn btn-ghost text-xl">
+          <div class="border-1 bg-secondary logo p-2 rounded-xl" routerLink="/">
+            <img src="../../assets/optiroute-logo.png" alt="OptiRoute" class="h-10 w-auto">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="navbar-center flex">
+      <div class="menu menu-sm sm:menu-lg menu-horizontal px-1">
+        <li><a href="/">Home</a></li>
+        <li>
+          <details #productsMenu>
+            <summary>Solutions</summary>
+            <ul class="z-30">
+              <li>
+                <a href="/solutions">All Solutions</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details #servicesMenu>
+            <summary>Services</summary>
+            <ul class="z-30">
+              <li>
+                <a href="/services">Our Services</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details #aboutMenu>
+            <summary>About</summary>
+            <ul class="z-30">
+              <li>
+                <a href="/about">Company Info</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </div>
+    </div>
+    <div class="navbar-end pe-4 flex align-items-center">
+      <div class="dropdown dropdown-end pe-4" routerLink="/login">
+        <div tabindex="0" role="button">
+          <fa-icon [icon]="['fas', 'user']" class="ui-menu-icon"></fa-icon>
+        </div>
+        <ul class="dropdown-content menu menu-lg bg-base-100 rounded-box z-10 w-52 p-2 shadow">
+          <li>
+            <a class="Link" routerLink="/login">Login</a>
+          </li>
+          <li>
+            <a class="Link" routerLink="/register">Register</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown dropdown-end me-2" routerLink="/cart">
+        <div tabindex="0" role="button">
+          <fa-icon [icon]="['fas', 'cart-shopping']" class="ui-menu-icon"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  
